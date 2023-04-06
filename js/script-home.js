@@ -15,3 +15,27 @@ function reveal() {
   }
   
   window.addEventListener("scroll", reveal);
+
+const heading = document.querySelector('.text');
+let text =` I'm Yash Patel`;
+let endvalue=1;
+isForwards=true
+
+let id = setInterval(() => {
+  heading.textContent=text.substring(0,endvalue);
+  
+  if(isForwards){
+    endvalue++;
+  }
+  else{
+    endvalue--;
+  }
+  if (endvalue>text.length+10) {
+    isForwards=false;
+  }
+  if(endvalue < 0){
+    isForwards=true;
+  }
+}, 100);
+
+

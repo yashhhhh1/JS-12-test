@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #textbox {
+            width: 70vw;
+            height: 30vh;
+        }
+
+        button {
+            width: 70px;
+            height: 40px;
+            background-color: green;
+            color: white;
+            border-radius: 10px;
+            box-shadow: grey;
+        }
+
+        #clipboard {
+            width: 70vw;
+            margin: 50px;
+            background-color: green;
+            color: white;
+            padding: 20px;
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <textarea id="textbox1"></textarea><br />
+        <button onclick="text1()">Copy</button>
+         
+    </center>
+    <center>
+        <textarea id="textbox2"></textarea><br />
+        <button onclick="text2()">Copy</button>
+         
+    </center>
+    <center>
+        <textarea id="textbox3"></textarea><br />
+        <button onclick="text3()">Copy</button>
+
+       
+    </center>
+
+    <script>
+        function text1() {
+            let Text = document.getElementById("textbox1");
+            Text.select();
+            navigator.clipboard.writeText(Text.value);
+        }
+        function text2() {
+            let Text = document.getElementById("textbox2");
+            Text.select();
+            navigator.clipboard.writeText(Text.value);
+        } function text3() {
+            let Text = document.getElementById("textbox3");
+            Text.select();
+            navigator.clipboard.writeText(Text.value);
+        }
+    </script>
+</body>
+
+</html>
